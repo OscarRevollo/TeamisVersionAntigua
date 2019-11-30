@@ -53,10 +53,10 @@ public class RegistrarActivity extends AppCompatActivity {
                 String txt_password = password.getText().toString();
 
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_password)){
-                    Toast.makeText(RegistrarActivity.this, "passord must 6 caras", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrarActivity.this, "LLene todos los campos", Toast.LENGTH_SHORT).show();
 
                 }else if (txt_password.length()<6){
-                    Toast.makeText(RegistrarActivity.this,"password muy corto" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrarActivity.this,"Contraseña muy corta" , Toast.LENGTH_SHORT).show();
 
                 }else {
                     register(txt_username,txt_email, txt_password);
@@ -96,7 +96,7 @@ public class RegistrarActivity extends AppCompatActivity {
                             });
 
                         }else {
-                            Toast.makeText(RegistrarActivity.this,  "tu no puedes con email y password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistrarActivity.this,  "el correo o usuario ya esta en uso", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
